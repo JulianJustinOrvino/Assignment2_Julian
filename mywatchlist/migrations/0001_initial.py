@@ -12,15 +12,15 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='CatalogItem',
+            name='MyWatchListItem',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('item_name', models.CharField(max_length=255)),
-                ('item_price', models.BigIntegerField()),
-                ('item_stock', models.IntegerField()),
-                ('description', models.TextField()),
+                ('watched', models.CharField(max_length=255)),
+                ('title', models.CharField(max_length=255)),
+                ('release_date', models.CharField(max_length=255)),
                 ('rating', models.IntegerField()),
-                ('item_url', models.URLField()),
+                ('review', models.CharField(max_length=255)),
+                
             ],
         ),
     ]

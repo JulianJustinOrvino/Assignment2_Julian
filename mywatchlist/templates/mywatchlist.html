@@ -1,47 +1,64 @@
+<style>
+    body {
+      border-collapse: collapse;
+      margin: 25px 0;
+      display: grid;
+      align-items: center;
+      font-family: sans-serif;
+      justify-content: center;
+      color:#9fce16;
+      font-size: 0.9rem;
+      background-color: #4f546c;
+    }
+    table{
+      text-align: middle;
+      box-shadow: 5px 10px rgb(172, 90, 90); 
+      border:5px solid black;
+      background-color: bisque;
+    }
+    th {
+      padding: 15px 10px 5px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      background:fixed;
+    }
+    
+</style>
 {% extends 'base.html' %}
 
-{% block content %}
-  <title> MyWatch List </title>
-  </style>
-  <h1>Assignment 3 PBP/PBD</h1>
+ {% block content %}
+<title> MyWatch List </title>
 
-  <h5>Name: </h5>
-  <p>{{ name }}</p>
+    <h1>Assignment 3 PBP/PBD</h1>
 
-  <h5>Student ID: </h5>
-  <p>{{ NPM }}</p>
+    <h5>Name: </h5>
+    <p>{{ name }}</p>
 
-  <p>{{ msg_bonus }}</p>
+    <h5>Student ID: </h5>
+    <p>{{ npm }}</p>
 
-  <h2> Watch List</h2>
+    <p>{{ msg_bonus }}</p>
+
+    <h2> Watch List</h2>
 
 
-  <table >
+<table >
     <tr>
-      <th>Watched</th>
-      <th>Title</th>
-      <th>Release Date</th>
-      <th>Rating</th>
-      <th>Review</th>
+    <th>Watched</th>
+    <th>Title</th>
+    <th>Rating</th>
+    <th>Release Date</th>
+    <th>Review</th>
     </tr>
     {% comment %} Add the data below this line {% endcomment %}
     {% for item in list_item %}
-        <tr>
-            <td>{{item.watched}}</td>
-            <td>{{item.title}}</td>
-            <td>{{item.release_date}}</td>
-            <td>{{item.rating}}</td>
-           <td>{{item.review}}</td>
-        </tr>
+    <tr>
+        <td>{{item.watched}}</td>
+        <td>{{item.title}}</td>
+        <td>{{item.rating}}</td>
+        <td>{{item.release_date}}</td>
+        <td>{{item.review}}</td>
+    </tr>
     {% endfor %}
-  </table>
-
-{% endblock content %}
-
-
-
-
-
-
-
-{% endblock content %}
+</table>
+  {% endblock content %}
